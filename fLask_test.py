@@ -3,7 +3,7 @@ import random
 
 
 
-aplicatia_test = Flask(__name__)
+app = Flask(__name__)
 
 
 messages = [
@@ -14,9 +14,9 @@ messages = [
 ]
 
 
-@aplicatia_test.route("/")
+@app.route("/")
 def mesaj_aleator():
     return random.choice(messages)
 
 if __name__ == '__main__':
-    aplicatia_test.run()
+    app.run()
